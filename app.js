@@ -28,7 +28,11 @@ let person1 = new Object({
   }
 });
 
-*/
+///////
+
+
+//////
+
 
 function Shape(name, sides, sideLength) {
   this.name = name;
@@ -46,4 +50,43 @@ var square = new Shape('square', 4, 5);
 square.calcPerimeter();
 
 var triangle = new Shape('triangle', 3, 3);
+triangle.calcPerimeter();
+
+
+class Shape extends Object {
+  constructor(name, sides, sideLength){
+    super();
+    this.name = name;
+    this.sides = sides;
+    this.sideLength = sideLength;
+  }
+  calcPerimeter() {
+    console.log(this.sides * this.sideLength);
+  }
+}
+
+let square = new Shape('es6Square', 4, 5);
+square.calcPerimeter();
+
+let triangle = new Shape('es6Triangle', 3, 3);
+triangle.calcPerimeter();
+
+*/
+
+class Shape extends Object {
+  constructor(name, sides, sideLength){
+    super();
+    this.name = name;
+    this.sides = sides;
+    this.sideLength = sideLength;
+  }
+  calcPerimeter() {
+    console.log(this.sides * this.sideLength);
+  }
+}
+
+let square = new Shape('Square', 4, 5);
+square.calcPerimeter();
+
+let triangle = new Shape('Triangle', 3, 3);
 triangle.calcPerimeter();
